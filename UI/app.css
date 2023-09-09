@@ -1,0 +1,276 @@
+/* Main body  */
+body {
+  /* margin:0;
+  padding: 0; */
+  margin-bottom: 2rem;
+  /* background-color: rgb(250, 234, 237); */
+  background-color: #f9edef;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #f9edef 15px
+    ),
+    repeating-linear-gradient(#f9d5e455, #f9d5e4);
+}
+
+/* NAVBAR AND HEADING  */
+
+.navbar {
+  background: #fbd3e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #bb377d,
+    #fbd3e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #bb377d,
+    #fbd3e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.mainNavbarHeading {
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-family: "Lobster";
+  font-style: italic;
+  font-size: 2.5rem;
+  border: 2px solid rgb(249, 196, 238);
+  color: rgb(255, 7, 181);
+  /* background-color: rgb(250, 202, 236); */
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  text-shadow: 0.5px 0px 0.5px rgb(0, 0, 0), 0px 0.5px 0.5px rgb(0, 0, 0),
+    1px 1px 1px rgb(104, 0, 97), 1px 1px 1px rgb(104, 0, 97),
+    1px 1px 1px rgb(104, 0, 97), 1px 1px 1px rgb(104, 0, 97),
+    1px 1px 1px rgb(104, 0, 97), 1px 1px 1px rgb(104, 0, 97), 1px 1px 1px #ccc,
+    1px 1px 1px rgb(104, 0, 97), 1px 1px 1px #ccc, 1px 1px 1px rgb(104, 0, 97),
+    1px 1px 1px #ccc;
+
+  letter-spacing: 0.9mm;
+}
+
+.mainNavbarHeading:hover {
+  color: rgb(236, 0, 63);
+}
+
+.mainNavbarHeading span {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-family: "kaushan Script";
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+/* Main container below Navbar  */
+.container {
+  margin-top: 2rem;
+  /* background-color: pink; */
+}
+
+/* First Container Of Images  */
+
+.firstContainerRow {
+}
+
+/* Card CSS  */
+.card-wrapper {
+  /* margin: 1rem; */
+  padding: 0;
+  /* border: 2px solid red; */
+  border-radius: 1rem;
+  /* background-color: green; */
+}
+
+.custom-circle-image {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.custom-circle-image img {
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: "Lobster", sans-serif;
+  font-size: 1rem;
+  background-color: pink;
+  padding: 0.8rem;
+  color: #4f0019;
+  border-radius: 0.5rem;
+}
+
+.card-title span {
+  /* background-color: aqua; */
+  color: #000000;
+  font-size: 0.7rem;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+/* second row container  */
+
+.secondContainerRow {
+  margin-top: 3rem;
+}
+
+/* Upload image and dropzone  */
+
+.dropzone {
+  border-style: dashed;
+  background-color: pink;
+  border-radius: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2mm;
+  justify-content: center;
+  padding-top: 0;
+  margin: 0;
+}
+
+
+.dz-remove {
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(64, 0, 44);
+  font-weight: bolder;
+  justify-content: center;
+  text-align: center;
+  /* border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; */
+  background-color: rgb(255, 103, 129);
+}
+
+.dz-error-mark g,
+.dz-success-mark,
+.dz-progress,
+.dz-error-message {
+  display: none;
+}
+
+/* //Error message  */
+.error {
+  font-family: "Urbanist", sans-serif;
+  font-size: 2rem;
+  padding-top: auto;
+  background-color: rgb(249, 223, 223);
+  border-radius: 1rem;
+  /* line-height: initial; */
+  color: rgb(90, 1, 1);
+  text-align: center;
+  padding-top: 3rem;
+}
+
+/* Submit Button  */
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #8a002c;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 1.1rem;
+  width: 370%;
+  font-weight: bolder;
+  font-family: "Lobster", cursive;
+  /* background-color: #f1cee1; */
+  border: 0;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* Final Result  */
+
+/* Result Holder  */
+
+#resultHolder {
+}
+
+#classTable {
+  /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+  font-family: "Ubuntu", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(251, 232, 235);
+  border-radius: 1rem;
+}
+
+#classTable td,
+#classTable th {
+  text-align: center;
+  padding: 10px;
+}
+
+#classTable td {
+  font-family: "Lobster", sans-serif;
+  border: 2px ridge rgb(254, 157, 188);
+  color: #4f0019;
+  /* font-weight: bolder; */
+  background-color: rgb(252, 233, 233);
+}
+
+#classTable th {
+  font-size: 1.2rem;
+  font-family: "Lobster", sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background-color: #b20032;
+  color: rgb(252, 252, 252);
+  letter-spacing: 0.4mm;
+}
+
+/* FOOTER CREATION  */
+
+.footer{
+  margin: 0 auto;
+  width: 73%;
+  padding-top:1px;
+  margin-top: 3rem;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Lobster',sans-serif;
+  border-radius: 0.5rem;
+  color: #4f0019;
+  background: rgb(252, 196, 196);
+background: linear-gradient(124deg, rgb(249, 200, 200) 11%, rgb(247, 163, 202) 51%, rgb(253, 213, 213) 79%);
+}
+
+.footer p{
+  color: #8a002c;
+  font-family: 'Verdana',sans-serif;
+}

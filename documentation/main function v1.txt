@@ -1,0 +1,39 @@
+
+# getting the names of our celebrities from the folder names one by one
+cropped_image_dirs=[]
+celebrity_file_names_dict={}
+# x=1
+for img_dir in img_dirs:
+    count=1
+    celebrity_name=img_dir.split('/')[-1]
+#     x+=1
+    if celebrity_name == 'cropped':
+      continue
+#     print(celebrity_name)
+    
+    
+    
+    celebrity_file_names_dict[celebrity_name]=[]
+    
+    for entry in os.scandir(img_dir):
+        print(entry.path)
+        
+#         roi_color=get_cropped_image_if_2_eyes(entry.path)
+        roi_color=1
+        if roi_color is not None:
+            cropped_folder=path_to_cr_data+celebrity_name
+            if not os.path.exists(cropped_folder):
+                os.makedirs(cropped_folder)
+                cropped_image_dirs.append(cropped_folder)
+                print("Generating cropped images in folder: ",cropped_folder)
+                
+            cropped_file_name=celebrity_name+str(count)+".png"
+            cropped_file_path=cropped_folder+"/"+cropped_file_name
+            
+            cv2.imwrite(cropped_file_path,roi_color)
+            celebrity_file_names_dict[celebrity_name].append(cropped_file_path)
+            count=count+1
+            
+# below, we are seeing that the function is traversing over 
+# all the images we have in our dataset and storing the cropped images
+# in the background

@@ -1,0 +1,4 @@
+#It contains all the modules which we need to install for our project
+PyWavelets
+opencv-python
+seaborn
